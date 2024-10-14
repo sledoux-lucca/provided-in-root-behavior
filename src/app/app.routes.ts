@@ -3,11 +3,11 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: 'child',
-    loadComponent: () => import('./pages/child/child.component').then(m => m.ChildComponent)
+    loadChildren: () => import('./pages/child/child.routes').then(m => m.routes)
   },
   {
     path: 'cousin',
-    loadComponent: () => import('./pages/cousin/cousin.component').then(m => m.CousinComponent)
+    loadChildren: () => import('./pages/cousin/cousin.routes').then(m => m.routes)
   },
   {
     path: '**',
