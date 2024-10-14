@@ -7,7 +7,8 @@ import { ChildrenSharedService } from '../../services/children-shared.service';
   standalone: true,
   imports: [],
   templateUrl: './child.component.html',
-  styleUrl: './child.component.scss'
+  styleUrl: './child.component.scss',
+  providers: [ChildSpecificService, ChildrenSharedService]
 })
 export class ChildComponent {
   childSpecificService = inject(ChildSpecificService);

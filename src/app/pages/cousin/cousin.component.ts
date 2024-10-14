@@ -7,7 +7,8 @@ import { CousinSpecificService } from '../../services/cousin-specific.service';
   standalone: true,
   imports: [],
   templateUrl: './cousin.component.html',
-  styleUrl: './cousin.component.scss'
+  styleUrl: './cousin.component.scss',
+  providers: [CousinSpecificService, ChildrenSharedService]
 })
 export class CousinComponent {
   cousinSpecificService = inject(CousinSpecificService);

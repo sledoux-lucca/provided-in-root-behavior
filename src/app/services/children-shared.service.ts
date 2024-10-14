@@ -1,8 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ChildrenSharedService {
   name = signal('children-shared-service');
 

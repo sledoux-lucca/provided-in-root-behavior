@@ -1,8 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CousinSpecificService {
   name = signal('cousin-specific-service');
 
