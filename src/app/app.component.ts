@@ -21,18 +21,6 @@ import { AppWideService } from './services/app-wide.service';
     </nav>
     <router-outlet />
   `,
-  styles: [
-    `
-      .navbar {
-        display: flex;
-        gap: 1rem;
-      }
-
-      .active {
-        font-weight: bold;
-      }
-    `,
-  ],
 })
 export class AppComponent {
   title = 'provided-in-root-behavior';

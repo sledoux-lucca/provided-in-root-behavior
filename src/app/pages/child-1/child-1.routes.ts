@@ -13,5 +13,17 @@ export const routes: Routes = [
       ChildrenProvidedInRouteService,
       AppAndChild1ProvidedInRouteService,
     ],
+    children: [
+      {
+        path: 'grand-child-1',
+        loadChildren: () =>
+          import('./grand-child-1/grand-child-1.routes').then((m) => m.routes),
+      },
+      {
+        path: 'grand-child-2',
+        loadChildren: () =>
+          import('./grand-child-2/grand-child-2.routes').then((m) => m.routes),
+      },
+    ],
   },
 ];
