@@ -3,6 +3,7 @@ import { ChildrenProvidedInComponentService } from '../../../services/children-p
 import { ChildrenProvidedInRouteService } from '../../../services/children-provided-in-route.service';
 import { ChildrenService } from '../../../services/children.service';
 import { GrandChild2Service } from '../../../services/grand-child-2.service';
+import { GrandChildrenService } from '../../../services/grand-children.service';
 
 @Component({
   selector: 'app-grand-child-2',
@@ -21,6 +22,7 @@ import { GrandChild2Service } from '../../../services/grand-child-2.service';
 export class GrandChild2Component {
   services = [
     inject(GrandChild2Service),
+    inject(GrandChildrenService),
     inject(ChildrenService),
     inject(ChildrenProvidedInComponentService),
     inject(ChildrenProvidedInRouteService),
