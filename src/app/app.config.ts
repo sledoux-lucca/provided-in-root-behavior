@@ -7,5 +7,10 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
+    // {
+    //   provide: APP_INITIALIZER,
+    //   useValue: () => inject(AppInitService).init(),
+    //   multi: true,
+    // },
   ],
 };
