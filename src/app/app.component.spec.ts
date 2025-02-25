@@ -24,6 +24,8 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, provided-in-root-behavior');
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Hello, provided-in-root-behavior'
+    );
   });
 });

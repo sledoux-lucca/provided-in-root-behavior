@@ -1,12 +1,7 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { ALoggedService } from './abstract-logged.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class AppWideService {
-  name = signal('app-wide-service');
-
-  constructor() {
-    console.log('AppWideService instanciated');
-  }
-}
+export class AppWideService extends ALoggedService {}

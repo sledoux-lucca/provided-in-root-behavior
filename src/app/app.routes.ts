@@ -2,15 +2,17 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'child',
-    loadChildren: () => import('./pages/child/child.routes').then(m => m.routes)
+    path: 'child-1',
+    loadChildren: () =>
+      import('./pages/child-1/child-1.routes').then((m) => m.routes),
   },
   {
-    path: 'cousin',
-    loadChildren: () => import('./pages/cousin/cousin.routes').then(m => m.routes)
+    path: 'child-2',
+    loadChildren: () =>
+      import('./pages/child-2/child-2.routes').then((m) => m.routes),
   },
   {
     path: '**',
-    redirectTo: 'child'
-  }
+    redirectTo: 'child-1',
+  },
 ];
