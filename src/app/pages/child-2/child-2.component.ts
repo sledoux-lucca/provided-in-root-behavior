@@ -4,7 +4,6 @@ import { ChildrenSharedService } from '../../services/children-shared.service';
 
 @Component({
   selector: 'app-child-2',
-  standalone: true,
   imports: [],
   template: `
     <h2>Child2Component</h2>

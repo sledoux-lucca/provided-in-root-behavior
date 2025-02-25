@@ -4,7 +4,6 @@ import { AppWideService } from './services/app-wide.service';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
