@@ -4,8 +4,4 @@ import { ALoggedService } from './abstract-logged.service';
 @Injectable({
   providedIn: 'root',
 })
-export class AppInitService extends ALoggedService {
-  init(): void {
-    console.log(`${this.constructor.name}.init()`);
-  }
-}
+export class Child1SpecificInComponentService extends ALoggedService {}
