@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { AppAndChild1InRouteService } from './services/app-and-child-1-in-route.service';
+import { AppAndChild1ProvidedInRouteService } from './services/app-and-child-1-provided-in-route.service';
 import { AppWideService } from './services/app-wide.service';
 
 @Component({
@@ -36,5 +36,8 @@ import { AppWideService } from './services/app-wide.service';
 })
 export class AppComponent {
   title = 'provided-in-root-behavior';
-  services = [inject(AppWideService), inject(AppAndChild1InRouteService)];
+  services = [
+    inject(AppWideService),
+    inject(AppAndChild1ProvidedInRouteService),
+  ];
 }

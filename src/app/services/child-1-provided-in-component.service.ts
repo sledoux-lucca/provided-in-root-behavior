@@ -4,4 +4,4 @@ import { ALoggedService } from './abstract-logged.service';
 @Injectable({
   providedIn: 'root',
 })
-export class ChildrenSharedInComponentService extends ALoggedService {}
+export class Child1ProvidedInComponentService extends ALoggedService {}

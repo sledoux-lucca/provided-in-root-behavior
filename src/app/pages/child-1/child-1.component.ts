@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { Child1And2Service } from '../../services/child-1-and-2.service';
-import { Child1InComponentService } from '../../services/child-1-in-component.service';
-import { Child1InRouteService } from '../../services/child-1-in-route.service';
+import { Child1ProvidedInComponentService } from '../../services/child-1-provided-in-component.service';
+import { Child1ProvidedInRouteService } from '../../services/child-1-provided-in-route.service';
 import { Child1Service } from '../../services/child-1.service';
-import { ChildrenSharedInComponentService } from '../../services/children-shared-in-component.service';
-import { ChildrenSharedInRouteService } from '../../services/children-shared-in-route.service';
-import { ChildrenSharedService } from '../../services/children-shared.service';
+import { ChildrenProvidedInComponentService } from '../../services/children-provided-in-component.service';
+import { ChildrenProvidedInRouteService } from '../../services/children-provided-in-route.service';
+import { ChildrenService } from '../../services/children.service';
 
 @Component({
   selector: 'app-child-1',
@@ -19,16 +19,19 @@ import { ChildrenSharedService } from '../../services/children-shared.service';
       }
     </ul>
   `,
-  providers: [Child1InComponentService, ChildrenSharedInComponentService],
+  providers: [
+    Child1ProvidedInComponentService,
+    ChildrenProvidedInComponentService,
+  ],
 })
 export class Child1Component {
   services = [
     inject(Child1Service),
     inject(Child1And2Service),
-    inject(ChildrenSharedService),
-    inject(Child1InComponentService),
-    inject(Child1InRouteService),
-    inject(ChildrenSharedInComponentService),
-    inject(ChildrenSharedInRouteService),
+    inject(ChildrenService),
+    inject(Child1ProvidedInComponentService),
+    inject(Child1ProvidedInRouteService),
+    inject(ChildrenProvidedInComponentService),
+    inject(ChildrenProvidedInRouteService),
   ];
 }

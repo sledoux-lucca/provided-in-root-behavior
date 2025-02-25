@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { Child2And3Service } from '../../services/child-2-and-3.service';
 import { Child3Service } from '../../services/child-3.service';
-import { ChildrenSharedInComponentService } from '../../services/children-shared-in-component.service';
-import { ChildrenSharedInRouteService } from '../../services/children-shared-in-route.service';
-import { ChildrenSharedService } from '../../services/children-shared.service';
+import { ChildrenProvidedInComponentService } from '../../services/children-provided-in-component.service';
+import { ChildrenProvidedInRouteService } from '../../services/children-provided-in-route.service';
+import { ChildrenService } from '../../services/children.service';
 
 @Component({
   selector: 'app-child-3',
@@ -17,14 +17,14 @@ import { ChildrenSharedService } from '../../services/children-shared.service';
       }
     </ul>
   `,
-  providers: [ChildrenSharedInComponentService],
+  providers: [ChildrenProvidedInComponentService],
 })
 export class Child3Component {
   services = [
     inject(Child3Service),
     inject(Child2And3Service),
-    inject(ChildrenSharedService),
-    inject(ChildrenSharedInComponentService),
-    inject(ChildrenSharedInRouteService),
+    inject(ChildrenService),
+    inject(ChildrenProvidedInComponentService),
+    inject(ChildrenProvidedInRouteService),
   ];
 }
