@@ -17,6 +17,7 @@ import { AppWideService } from './services/app-wide.service';
     <nav class="navbar">
       <a routerLink="/child-1" routerLinkActive="active">Child 1</a>
       <a routerLink="/child-2" routerLinkActive="active">Child 2</a>
+      <a routerLink="/child-3" routerLinkActive="active">Child 3</a>
     </nav>
     <router-outlet />
   `,

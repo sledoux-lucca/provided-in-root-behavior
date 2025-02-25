@@ -12,6 +12,11 @@ export const routes: Routes = [
       import('./pages/child-2/child-2.routes').then((m) => m.routes),
   },
   {
+    path: 'child-3',
+    loadChildren: () =>
+      import('./pages/child-3/child-3.routes').then((m) => m.routes),
+  },
+  {
     path: '**',
     redirectTo: 'child-1',
   },

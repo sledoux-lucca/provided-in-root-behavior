@@ -4,4 +4,4 @@ import { ALoggedService } from './abstract-logged.service';
 @Injectable({
   providedIn: 'root',
 })
-export class Child2SpecificService extends ALoggedService {}
+export class Child2InRouteService extends ALoggedService {}
