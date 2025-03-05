@@ -18,6 +18,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'child-1',
+    redirectTo: '',
   },
 ];

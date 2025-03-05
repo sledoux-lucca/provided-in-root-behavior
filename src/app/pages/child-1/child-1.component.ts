@@ -21,7 +21,7 @@ import { ChildrenService } from '../../services/children.service';
     </ul>
 
     <nav class="navbar">
-      <a routerLink="" routerLinkActive="active">..</a>
+      <a routerLink="/child-1" routerLinkActive="active">.</a>
       <a routerLink="grand-child-1" routerLinkActive="active">Grand Child 1</a>
       <a routerLink="grand-child-2" routerLinkActive="active">Grand Child 2</a>
     </nav>
